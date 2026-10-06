@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#020302;color:#eee;font-family:Arial,Helvetica,sans-serif}
+#game{position:fixed;inset:0}
+canvas{display:block;width:100%;height:100%;touch-action:none}
+#hud{position:fixed;inset:0;pointer-events:none}
+.top-left{position:absolute;left:22px;top:20px;width:220px;text-shadow:0 2px 5px #000}
+.stat{display:flex;justify-content:space-between;margin-bottom:10px;font-size:12px;letter-spacing:2px}
+.stat strong{font-size:14px}
+.bar-wrap{margin:9px 0;font-size:10px;letter-spacing:2px}
+.bar{height:5px;background:rgba(255,255,255,.16);margin-top:5px;border-radius:5px;overflow:hidden}
+.bar i{display:block;width:100%;height:100%;background:#ddd;transition:width .12s}
+#hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:12px;letter-spacing:1px;text-align:center;text-shadow:0 2px 5px #000;opacity:.9;white-space:nowrap}
+#crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:22px;text-shadow:0 0 8px #fff;opacity:.8}
+#danger{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 25%,rgba(120,0,0,.0) 55%,rgba(120,0,0,.7));opacity:0;transition:opacity .1s}
+.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.78);z-index:5;text-align:center;padding:20px}
+.screen.hidden{display:none}
+.panel{max-width:650px;padding:36px 40px;background:rgba(5,7,6,.82);border:1px solid rgba(255,255,255,.16);box-shadow:0 20px 80px rgba(0,0,0,.7)}
+.eyebrow{font-size:11px;letter-spacing:5px;opacity:.65;margin-bottom:12px}
+h1{font-family:Georgia,serif;font-size:64px;letter-spacing:10px;margin:0 0 2px}
+h2{font-size:14px;letter-spacing:7px;font-weight:normal;margin:0 0 26px;opacity:.7}
+.panel p{font-size:14px;line-height:1.7;color:#bbb}
+button{margin-top:20px;padding:14px 26px;background:#e7e7e7;color:#090909;border:0;font-weight:bold;letter-spacing:2px;cursor:pointer}
+button:hover{background:#fff}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:25px;color:#888;font-size:11px}
+.controls b{color:#ddd}
+#loadStatus{margin-top:20px;color:#888;font-size:11px}
+@media(max-width:600px){
+  .top-left{left:12px;top:12px;width:170px}
+  #hint{bottom:12px;font-size:10px;max-width:90%;white-space:normal}
+  h1{font-size:42px;letter-spacing:6px}
+  .panel{padding:28px 20px}
+}

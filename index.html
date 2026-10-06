@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Slender — The Eight Pages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <div id="hud">
+    <div class="top-left">
+      <div class="stat"><span>PÁGINAS</span><strong id="pages">0 / 8</strong></div>
+      <div class="bar-wrap"><span>BATERÍA</span><div class="bar"><i id="batteryBar"></i></div></div>
+      <div class="bar-wrap"><span>RESISTENCIA</span><div class="bar"><i id="staminaBar"></i></div></div>
+    </div>
+    <div id="hint">Haz clic para jugar · WASD mover · ratón mirar · F linterna · Shift correr</div>
+    <div id="danger"></div>
+    <div id="crosshair">+</div>
+  </div>
+
+  <div id="startScreen" class="screen">
+    <div class="panel">
+      <div class="eyebrow">UNA PESADILLA EN EL BOSQUE</div>
+      <h1>SLENDER</h1>
+      <h2>THE EIGHT PAGES</h2>
+      <p>Encuentra las 8 páginas. No mires demasiado tiempo.</p>
+      <button id="startButton">ENTRAR EN EL BOSQUE</button>
+      <div class="controls">
+        <span><b>W A S D</b> Mover</span>
+        <span><b>RATÓN</b> Mirar</span>
+        <span><b>F</b> Linterna</span>
+        <span><b>SHIFT</b> Correr</span>
+        <span><b>ESC</b> Liberar ratón</span>
+      </div>
+      <div id="loadStatus">Cargando...</div>
+    </div>
+  </div>
+
+  <div id="endScreen" class="screen hidden">
+    <div class="panel">
+      <h1 id="endTitle">TE ENCONTRÓ</h1>
+      <p id="endText"></p>
+      <button id="restartButton">VOLVER A INTENTARLO</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
